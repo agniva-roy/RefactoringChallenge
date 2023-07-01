@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Mapster;
+﻿using Mapster;
 using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
 using RefactoringChallenge.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RefactoringChallenge.Controllers
 {
@@ -49,7 +49,6 @@ namespace RefactoringChallenge.Controllers
             return Json(result);
         }
 
-
         [HttpGet("{orderId}")]
         public IActionResult GetById([FromRoute] int orderId)
         {
@@ -62,10 +61,10 @@ namespace RefactoringChallenge.Controllers
 
                 return Json(result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
-            }            
+            }
         }
 
         [HttpPost("[action]")]
@@ -168,7 +167,6 @@ namespace RefactoringChallenge.Controllers
                 var order = _northwindDbContext.Orders.FirstOrDefault(o => o.OrderId == orderId);
                 if (order == null)
                     return NotFound();
-
 
                 var orderDetails = _northwindDbContext.OrderDetails.Where(od => od.OrderId == orderId);
 

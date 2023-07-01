@@ -34,12 +34,12 @@ namespace RefactoringChallenge
 
                 services.AddSwaggerGen();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
-            
         }
+
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

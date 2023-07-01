@@ -33,8 +33,10 @@ namespace RefactoringChallenge.Entities
 
         public string Region { get; set; }
         public string PostalCode { get; set; }
+
         [StringLength(15)]
         public string Country { get; set; }
+
         public string Phone { get; set; }
         public string Fax { get; set; }
 

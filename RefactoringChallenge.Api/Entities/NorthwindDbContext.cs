@@ -322,7 +322,6 @@ namespace RefactoringChallenge.Entities
             OnModelCreatingPartial(modelBuilder);
         }
 
-
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }
